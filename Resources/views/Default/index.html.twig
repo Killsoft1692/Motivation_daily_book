@@ -1,0 +1,10 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <font color="#ff8c00"> <h1>Daily tasks</h1></font>
+
+    <form action="#" method="post" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+    </form>
+
+{% endblock %}

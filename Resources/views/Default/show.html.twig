@@ -1,0 +1,14 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <font color="#7fff00"> <h1>Daily tasks</h1></font>
+    <ul>
+    {% for tasks in many %}
+        <li>{{ tasks.dueDate|date }}</li>
+        <li><h2>First:</h2>{{ tasks.main }}</li>
+        <li><h2>Second:</h2>{{ tasks.second }}</li>
+        <li><h2>If you can:</h2>{{ tasks.third }}</li>
+        <li><h2>Progress:</h2>{{ tasks.end }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

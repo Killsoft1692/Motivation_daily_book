@@ -1,0 +1,7 @@
+daily_tasks:
+    path: /daily_tasks
+    defaults: { _controller: AcmeDailyBundle:Default:create}
+
+tasks_execute:
+    path: /tasks_execute
+    defaults: { _controller: AcmeDailyBundle:Default:index}
