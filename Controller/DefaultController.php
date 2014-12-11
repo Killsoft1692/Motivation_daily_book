@@ -17,8 +17,7 @@ class DefaultController extends Controller
    public function createAction(Request $request)
     {
         $tasks = new Tasks();
-        $tasks->setDueDate(new \DateTime('today'));
-
+        
         $form = $this->createForm(new TasksType(), $tasks);
         $form->handleRequest($request);
 

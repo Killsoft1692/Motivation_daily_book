@@ -1,10 +1,42 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    <font color="#ff8c00"> <h1>Daily tasks</h1></font>
+
+<center>
+
+    <font color="#ff8c00" xmlns="http://www.w3.org/1999/html"> <h1>Daily tasks</h1></font>
 
     <form action="#" method="post" {{ form_enctype(form) }}>
-        {{ form_widget(form) }}
+
+    <div class="border-r">
+        {{ form_label(form.main, 'Main task:') }}<br>
+        {{ form_widget(form.main)}}
+    </div>
+    <div class="border-r">
+        {{ form_label(form.second, 'Second task:') }}<br>
+        {{ form_widget(form.second)}}
+    </div>
+    <div class="border-r">
+        {{ form_label(form.third, 'Third task:') }}<br>
+        {{ form_widget(form.third)}}
+    </div>
+    <div class="border-r">
+        {{ form_label(form.end, 'I hope i can do this:') }}<br>
+        {{ form_widget(form.end)}}
+    </div>
+    <div class="border-r">
+        {{ form_label(form.dueDate, 'Set Date:') }}<br>
+        {{ form_widget(form.dueDate)}}
+    </div>
+        <br>{{ form_widget(form.save) }}
+        {{ form_rest(form) }}
+
     </form>
+
+</center>
+
+
+
+
 
 {% endblock %}
