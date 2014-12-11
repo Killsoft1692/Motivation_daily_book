@@ -9,23 +9,23 @@
     <form action="#" method="post" {{ form_enctype(form) }}>
 
     <div class="border-r">
-        {{ form_label(form.main) }}<br>
+        {{ form_label(form.main, 'Main task:') }}<br>
         {{ form_widget(form.main)}}
     </div>
     <div class="border-r">
-        {{ form_label(form.second) }}<br>
+        {{ form_label(form.second, 'Second task:') }}<br>
         {{ form_widget(form.second)}}
     </div>
     <div class="border-r">
-        {{ form_label(form.third) }}<br>
+        {{ form_label(form.third, 'Third task:') }}<br>
         {{ form_widget(form.third)}}
     </div>
     <div class="border-r">
-        {{ form_label(form.end) }}<br>
+        {{ form_label(form.end, 'I hope i can do this:') }}<br>
         {{ form_widget(form.end)}}
     </div>
     <div class="border-r">
-        {{ form_label(form.dueDate) }}<br>
+        {{ form_label(form.dueDate, 'Set Date:') }}<br>
         {{ form_widget(form.dueDate)}}
     </div>
         <br>{{ form_widget(form.save) }}
